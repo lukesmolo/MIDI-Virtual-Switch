@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+	<gresource prefix="/my">
+		<file compressed="true" preprocess="xml-stripblanks">UI/MyPage.glade</file>
+  </gresource>
+</gresources>
