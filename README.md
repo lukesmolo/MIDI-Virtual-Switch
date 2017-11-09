@@ -1,4 +1,4 @@
-#MIDI Virtual Switch
+# MIDI Virtual Switch
 
 MIDI Virtual Switch is a virtual switch for the interconnection of several digital
 musical instruments. From the Switch it is possible to monitor and possibly modify
@@ -14,7 +14,7 @@ forwards the traffic to the Switch.
 
 
 
-##Environment Configuration
+## Environment Configuration
 Basing on this idea, several different configurations can be created.
 For instance, during the experimental phase, configurations as the images below have been tested.
 The first represents a way for sending MIDI packets made by a digital keyboard
@@ -30,7 +30,7 @@ board.<br>
 <img src="/pics/midi_network_with_switch.png" width="280">
 <img src="/pics/midi_network.png" width="280">
 
-##Goal
+## Goal
 The most optimistic goal of MIDI Virtual Switch is to try to make the same work of a physical
 mixer on a real musical stage, where instead of using analogic connections for
 musical instruments, they are connected by using networks, physical or virtual
@@ -39,10 +39,10 @@ ones. Images below represent exactly this idea.<br>
 <img src="/pics/example.png" width="280">
 <img src="/pics/example1.png" width="280">
 
-##GUI
+## GUI
 A very basic GUI is provided and it is required only by the Switch.
 
-##Requirements
+## Requirements
 * You need to install ALSA
 * You need to load the [VirMidi](http://alsa.opensrc.org/VirMidi) kernel module for reading/writing MIDI packets.
 * You need to install GTK+3 for using the GUI in the Switch
@@ -50,7 +50,7 @@ A very basic GUI is provided and it is required only by the Switch.
 * You need to install a software synthesizer for playing MIDI packets, for
 instance [Timidity++](http://timidity.sourceforge.net/), [Fluidsynth](http://www.fluidsynth.org/), etc...
 
-##Usage
+## Usage
 Clone the repository both on the computer you want to use as Switch and on all
 your intermediate nodes:
 ```
@@ -86,7 +86,7 @@ or
 $ ./device 224.1.2.3 VXVDE keyboard
 ```
 
-#Benchmark
+# Benchmark
 Since MIDI is incapsulated inside a network packet (IP, or ETH), an extra delay is introduced. In order to understand if it is heavy for the all computation, some
 tests have been made: for example, let's see the behaviour of a MIDI flow of 10000 packets .<br>
 In the **first table** only a flow entirely on the Virtual Switch computer is
@@ -123,21 +123,21 @@ As you can see, it seems there are no big differences between the pure MIDI
 connection and the MIDI incapsulation, both when the flow is on the same computer and when it travels through a network. Furthermore, a fixed maximum time seems to be an upper limit. It could represent the worst case.
 
 
-##Status of the project
+## Status of the project
 Actually this project is a proof of concept, since several features have still to be
 implemented and something has to be redesigned. This was also my Bachelor's degree.
 
 Now I am working on MIDI Virtual Switch2, where the GUI is moved to web
 interface for a better portability and more features are implemented.
 
-#Contributing
+# Contributing
 I would be very glad if you want to contribute to improving this project.<br>
 Please fork it and submit a pull request! :sunglasses:
 
-##License
+## License
 MIDI Virtual Switch is released under the GPLv2 license.
 
-##TODO
+## TODO
 * There are still some most common MIDI features to implement
 * Opening more connections to a single intermediate node
 * Splitting MIDI channels in order to redirect their flow on different devices
